@@ -1,7 +1,6 @@
 let img;
 let option = -1;
 let buttons = []
-let color = 255;
 let buttonW = 100, buttonH = 45, space = 20;
 let x = buttonW, y = 0;
 let filters = [
@@ -21,10 +20,10 @@ function preload(){
 function setup(){
     createCanvas(windowWidth-5,windowHeight-5);
     y = height-450;
-    drawButtons()
+    loadButtons()
     frameRate(10)
 }
-function drawButtons(){
+function loadButtons(){
     textSize(15);
     for (let i = 0; i < filters.length; i++) {
         x = buttonW + space
